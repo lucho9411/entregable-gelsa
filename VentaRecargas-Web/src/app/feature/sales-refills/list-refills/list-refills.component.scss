@@ -1,0 +1,19 @@
+:host ::ng-deep {
+    .p-card {
+        box-shadow: 0px 2px 2px -1px black;
+    }
+
+    p-table {
+        box-shadow: 0px 10px 10px -6px black;
+        background-color: #d2d5d6;
+        border-radius: 15px;
+        margin-top: 5%;
+    }
+}
+.container {
+    box-shadow: 0px 10px 10px -6px black;
+    background-color: #d2d5d6;
+    border-radius: 15px;
+    margin-top: 5%;
+  }
+

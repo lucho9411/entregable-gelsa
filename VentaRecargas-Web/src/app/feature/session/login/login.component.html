@@ -1,0 +1,61 @@
+<p-toast></p-toast>
+<p-card header="Tu Recarga en Línea!">
+    <div id="contenedor">
+        <div  class="div-image">
+            <img src="../../../../assets/logo2.png" />
+            
+        </div>
+        <div class="container">
+            <form class="form" [formGroup]="form">
+                <h1 class="titulo">
+                    Ingreso al Sistema
+                </h1>
+                <br>
+                <p-inputGroup>
+                    <p-inputGroupAddon>
+                        <i class="pi pi-user"></i>
+                    </p-inputGroupAddon>
+                    <input
+                        pInputText
+                        placeholder="Usuario"
+                        formControlName="usuario"
+                        (keypress)="validar('usuario');"
+                        (blur)="validar('usuario');"/>
+                </p-inputGroup>
+                <small
+                    *ngIf="errorUsuario && !form.get('usuario')?.value"
+                    id="username-help">
+                    Ingrese su usuario por favor!
+                </small>
+
+                <p-inputGroup>
+                    <p-inputGroupAddon>
+                        <i class="pi pi-lock"></i>
+                    </p-inputGroupAddon>
+                    <input
+                        pInputText
+                        type="password"
+                        placeholder="Clave"
+                        formControlName="clave"
+                        (keypress)="validar('clave');"
+                        (blur)="validar('clave');"/>
+                </p-inputGroup>
+                <small
+                    *ngIf="errorClave && !form.get('clave')?.value"
+                    id="username-help">
+                    Ingrese su clave por favor!
+                </small>
+                <br><br>
+                <p-button 
+                    [disabled]="form.invalid"
+                    label="Aceptar"
+                    icon="pi pi-check"
+                    [raised]="true"
+                    [rounded]="true"
+                    (onClick)="iniciarSesion();">
+                </p-button>
+            </form>
+            
+        </div>
+    </div>       
+</p-card>

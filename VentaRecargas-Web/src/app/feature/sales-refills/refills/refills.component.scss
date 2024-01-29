@@ -1,0 +1,17 @@
+:host ::ng-deep {
+
+    .p-card-title {
+        color: white;
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    .p-dock {
+        z-index: 1000;
+    }
+
+}
+
+img {
+    cursor: pointer;
+}

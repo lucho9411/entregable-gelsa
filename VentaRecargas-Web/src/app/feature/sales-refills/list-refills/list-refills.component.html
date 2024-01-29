@@ -1,0 +1,38 @@
+<div class="container">
+    <p-table [value]="recargas" [tableStyle]="{'min-width': '60rem'}">
+        <ng-template pTemplate="header">
+            <tr>
+                <th>Id</th>
+                <th>Fecha y Hora</th>
+                <th>Número Telefónico</th>
+                <th>Valor</th>
+                <th>Operador</th>
+                <th>Vendedor</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-recarga>
+            <tr>
+                <td>{{recarga.IdRecarga || '-'}}</td>
+                <td>{{recarga.FechaRecarga | date: "dd/MM/yyyy 'at' hh:mm a" || '-'}}</td>
+                <td>{{recarga.NumeroTelefono || '-'}}</td>
+                <td>{{recarga.Precio | currency:'USD':'symbol':'4.2-2'}}</td>
+                <td>
+                    <img
+                        [src]="recarga.Operador.ImagenOperador"
+                        [alt]="recarga.Operador.NombreOperador"
+                        width="100"
+                        class="shadow-4" />
+                    </td>
+                <td>{{recarga.Vendedor.Name || '-'}}</td>
+           </tr>
+        </ng-template>
+        <ng-template pTemplate="summary">
+            <div class="flex align-items-center justify-content-between">
+                En total {{recargas ? recargas.length : 0 }} recargas.
+            </div>
+            <div class="flex align-items-center justify-content-between">
+                En total {{dineroTotal | currency:'USD':'symbol':'4.2-2'}}.
+            </div>
+        </ng-template>
+    </p-table>
+</div>

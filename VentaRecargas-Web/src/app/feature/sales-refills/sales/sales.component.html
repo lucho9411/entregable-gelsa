@@ -1,0 +1,111 @@
+<div class="container">
+    <div id="contenedor">
+        <div class="col-6">
+            <form class="form" [formGroup]="form">
+                <h1 class="titulo">
+                    Recargar
+                </h1>
+                <br>
+                <div id="contenedor">
+                    <div class="col-6">
+                        <label>Operador:</label>
+                        <p-dropdown
+                            [options]="operadores"
+                            optionLabel="NombreOperador"
+                            [showClear]="true"
+                            placeholder="Seleccione un operador"
+                            formControlName="operador">
+                            <ng-template pTemplate="selectedItem">
+                                <div class="flex align-items-center gap-2" *ngIf="form.get('operador')?.value">
+                                    <div class="lang-change-option-text selected-lang center">{{form.get('operador')?.value.NombreOperador}}</div>
+                                </div>
+                            </ng-template>
+                            <ng-template let-operator pTemplate="item">
+                                <div class="flex align-items-center gap-2">
+                                    <img [src]="operator.ImagenOperador" style="width: 18px"/>
+                                    <div>{{ operator.NombreOperador }}</div>
+                                </div>
+                            </ng-template>
+                        </p-dropdown>
+                    </div>
+                    <div class="col-6">
+                        <label>Valor:</label>
+                        <p-inputGroup>
+                            <p-inputGroupAddon>$</p-inputGroupAddon>
+                            <p-inputNumber
+                                inputId="integeronly"
+                                type="text"
+                                pInputText
+                                placeholder="Valor"
+                                formControlName="precio">
+                            </p-inputNumber>
+                            <p-inputGroupAddon>.00</p-inputGroupAddon>
+                        </p-inputGroup>
+                    </div>
+                    <div class="col-6">
+                        <label>Número Telefónico:</label>
+                        <p-inputMask
+                            mask="(999) 999-9999"
+                            laceholder="(999) 999-9999"
+                            formControlName="numero">
+                        </p-inputMask>
+                    </div>
+                    <div class="col-6">
+                        <label>Confirmar Número:</label>
+                        <p-inputMask
+                            mask="(999) 999-9999"
+                            laceholder="(999) 999-9999"
+                            formControlName="confirmarNumero">
+                        </p-inputMask>
+                    </div>
+                </div>
+        
+                <br><br>
+            </form>
+        </div>
+
+        <div class="col-6">
+            <h1 class="titulo">
+                Resumen de la Venta
+            </h1>
+            <br>
+            <div id="contenedor">
+                <div class="col-6">
+                    <label>
+                        <strong>Operador: </strong> {{form.get('operador')?.value?.NombreOperador || '-'}}
+                    </label>
+                </div>
+                <div class="col-6">
+                    <label>
+                        <strong>Valor: </strong> $ {{form.get('precio')?.value || '-'}}
+                    </label>
+                </div>
+                <br>
+                <div class="col-6">
+                    <label>
+                        <strong>Número Telefónico: </strong> {{form.get('numero')?.value || '-'}}
+                    </label>
+                </div>
+                <div class="col-6">
+                    <label>
+                        <strong>Número Confirmado: </strong> {{form.get('confirmarNumero')?.value || '-'}}
+                    </label>
+                </div>
+                <br><br>
+                <div class="col-12">
+                    <p-button 
+                    [disabled]="form.invalid"
+                    label="Aceptar"
+                    icon="pi pi-check"
+                    [raised]="true"
+                    [rounded]="true"
+                    (onClick)="completarVenta();">
+                </p-button>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+    
+</div>

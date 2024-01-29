@@ -1,0 +1,89 @@
+:host ::ng-deep {
+    p-inputGroup {
+        margin-top: 2%;
+    }
+
+    .p-card {
+        box-shadow: 0px 2px 2px -1px black;
+      }
+
+      .p-inputmask {
+        width: 100%;
+        font-size: 1rem;
+        color: #4b5563;
+        margin-top: 3%;
+      }
+
+      .p-button {
+        width: 100%;
+      }
+
+      p-button {
+        width: 40%;
+        margin-left: 30%;
+        margin-top: 8%;
+        display: block;
+      }
+}
+
+#contenedor {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+  
+  #contenedor > div {
+    width: 48%;
+    margin-top: 2%;
+    margin-right: 2%;
+  }
+
+  #contenedor > .col-12 {
+    width: 100%;
+    margin-top: 2%;
+    margin-right: 2%;
+  }
+
+  .form {
+    width:80%;
+    margin-left: 10%;
+  }
+
+  input {
+    width:100%;
+    font-size: 1rem;
+    color: #4b5563;
+  }
+
+  p-dropdown{
+    width:100%;
+    font-size: 1rem;
+    color: #4b5563;
+    display: grid;
+    margin-top: 3%;
+    height: 40px;
+  }
+
+  .titulo {
+    text-align: center;
+    justify-content: center;
+  }
+
+  .container {
+    box-shadow: 0px 10px 10px -6px black;
+    background-color: #d2d5d6;
+    border-radius: 15px;
+    margin-top: 5%;
+  }
+
+  .col-6 {
+    width: 48%;
+    margin-top: 2%;
+    margin-right: 2%;
+  }
+
+  .col-12 {
+    width: 100%;
+    margin-top: 2%;
+    margin-right: 2%;
+  }

@@ -1,0 +1,20 @@
+<p-card>
+    <div class="dock-window">
+        <p-dock [model]="items" position="top">
+            <ng-template pTemplate="item" let-item>
+                <p-toast></p-toast>
+                <p-confirmPopup></p-confirmPopup>
+                <img
+                    [src]="item.icon"
+                    [alt]="item.label"
+                    width="100%"
+                    height="100%"
+                    pTooltip="{{item.pTooltip}}"
+                    (click)="opcion(item.option);"/>
+            </ng-template>
+        </p-dock>
+    </div>
+    <br><br>
+    <app-sales *ngIf="opt1"></app-sales>
+    <app-list-refills *ngIf="opt2"></app-list-refills>
+</p-card>

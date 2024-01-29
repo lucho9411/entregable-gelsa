@@ -1,0 +1,85 @@
+:host ::ng-deep {
+    .p-card-title {
+        background-image: url('../../../../assets/fondo.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        height:15vh;
+        border-radius: 50px;
+    }
+
+    .p-card-title {
+        color: white;
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    p-inputGroup {
+      margin-top: 2%;
+    }
+
+    p-button {
+      width: 40%;
+      margin-left: 30%;
+      display: block;
+    }
+
+    .p-button {
+      width: 100%;
+    }
+
+    .p-card {
+      box-shadow: 0px 2px 2px -1px black;
+    }
+}
+
+#contenedor {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  #contenedor > div {
+    width: 50%;
+  }
+
+  .form {
+    width:80%;
+    margin-left: 10%;
+    margin-top:5%;
+  }
+
+  input {
+    width:100%;
+    font-size: 1rem;
+    color: #4b5563;
+  }
+
+  .titulo {
+    text-align: center;
+    justify-content: center;
+  }
+
+  .container {
+    box-shadow: 0px 10px 10px -6px black;
+    background-color: #d2d5d6;
+    border-radius: 15px;
+  }
+
+  .div-image {
+    margin-top: 10%;
+  }
+
+  .img {
+    background-image: url('../../../../assets/logo2.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height:60vh;
+    box-shadow: 0px 10px 10px -6px black;
+  }
+
+  small {
+    color: red;
+  }
+
+
