@@ -1,0 +1,13 @@
+package com.project.api.ventarecargas.security.repositories;
+
+import java.util.Optional;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+import com.project.api.ventarecargas.security.entities.Usuarios;
+
+@Repository
+public interface UsuariosRepository extends JpaRepository<Usuarios, Long> {
+	
+	Optional<Usuarios> findByNombre(String nombre);
+
+}

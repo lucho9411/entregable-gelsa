@@ -1,0 +1,317 @@
+{
+	"info": {
+		"_postman_id": "2dd614a3-e0d9-469a-9b0d-7276b9f99eba",
+		"name": "Venta Recargas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "generatePw",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9090/seguridad/generar-pw?Clave=Lucho9411",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"seguridad",
+						"generar-pw"
+					],
+					"query": [
+						{
+							"key": "Clave",
+							"value": "Lucho9411"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"User\": \"Vendedor Prueba\",\r\n    \"Password\": \"Lucho9411\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/seguridad/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"seguridad",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listarOperadores",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJWZW5kZWRvciBQcnVlYmEiLCJpYXQiOjE3MDY1MjUxNzEsImV4cCI6MTcwNjUyNjYxMX0.7DGapGIkswFbaZNvOS-uKQ8vE5axk8w09HEzYAFJQ1PKshw89lSIfC-zM4cXFk26P72_QtixZRnNSpx_86_asg",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9090/operadores/listar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"operadores",
+						"listar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "consultarOperador",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJWZW5kZWRvciBQcnVlYmEiLCJpYXQiOjE3MDY0NjkzNDMsImV4cCI6MTcwNjQ3MDc4M30.lNyL9oDZ9Ab3xW5b56FETr6hJ8k8zHbBv8Rcdml08PcZC-oLew6nJXjnFFGgjLmOKp2S5q8nY-2FVcJUN2xGlw",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9090/operadores/consultar?idOperador=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"operadores",
+						"consultar"
+					],
+					"query": [
+						{
+							"key": "idOperador",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listarRecargas",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJWZW5kZWRvciBQcnVlYmEiLCJpYXQiOjE3MDY1MjcyMjcsImV4cCI6MTcwNjUyODY2N30.zG6xnrL4VPchSwO3MCgWCQ6fAvuA2UDWebOQml1KD1vkDnG-XwNfYUUDDoqBzyJ052t_s1sEygIF3VT7C3O_-A",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9090/recargas/listar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"recargas",
+						"listar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "consultarRecarga",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJWZW5kZWRvciBQcnVlYmEiLCJpYXQiOjE3MDY0NjkzNDMsImV4cCI6MTcwNjQ3MDc4M30.lNyL9oDZ9Ab3xW5b56FETr6hJ8k8zHbBv8Rcdml08PcZC-oLew6nJXjnFFGgjLmOKp2S5q8nY-2FVcJUN2xGlw",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9090/recargas/consultar?idRecarga=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"recargas",
+						"consultar"
+					],
+					"query": [
+						{
+							"key": "idRecarga",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "crearRecarga",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJWZW5kZWRvciBQcnVlYmEiLCJpYXQiOjE3MDY0OTE4OTYsImV4cCI6MTcwNjQ5MzMzNn0.zPw--YHz275U40iaFrvfGHbdq_TWbP68voVujFVD3a5IGiQhsAIfS7iEWq5eOOEKeRTbnJL1VlKFS_xC9rnKxA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"NumeroTelefono\": \"3202465896\",\r\n    \"Precio\": 15000,\r\n    \"Vendedor\": {\r\n        \"IdUser\": 1,\r\n        \"Name\": \"Vendedor Prueba\",\r\n        \"Status\": 1\r\n    },\r\n    \"Operador\": {\r\n        \"IdOperador\": 2,\r\n        \"NombreOperador\": \"Tigo\",\r\n        \"ImagenOperador\": \"localhost:4200\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/recargas/agregar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"recargas",
+						"agregar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "editarRecarga",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJWZW5kZWRvciBQcnVlYmEiLCJpYXQiOjE3MDY0OTE4OTYsImV4cCI6MTcwNjQ5MzMzNn0.zPw--YHz275U40iaFrvfGHbdq_TWbP68voVujFVD3a5IGiQhsAIfS7iEWq5eOOEKeRTbnJL1VlKFS_xC9rnKxA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"IdRecarga\": 1,\r\n    \"NumeroTelefono\": \"31788965448\",\r\n    \"Precio\": 12000,\r\n    \"Operador\": {\r\n        \"IdOperador\": 3,\r\n        \"NombreOperador\": \"Wom\",\r\n        \"ImagenOperador\": \"http://localhost:4200\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/recargas/editar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"recargas",
+						"editar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "eliminarRecarga",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJWZW5kZWRvciBQcnVlYmEiLCJpYXQiOjE3MDY0OTE4OTYsImV4cCI6MTcwNjQ5MzMzNn0.zPw--YHz275U40iaFrvfGHbdq_TWbP68voVujFVD3a5IGiQhsAIfS7iEWq5eOOEKeRTbnJL1VlKFS_xC9rnKxA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9090/recargas/eliminar?idRecarga=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"recargas",
+						"eliminar"
+					],
+					"query": [
+						{
+							"key": "idRecarga",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "eliminarRecargasMasivo",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJWZW5kZWRvciBQcnVlYmEiLCJpYXQiOjE3MDY0OTE4OTYsImV4cCI6MTcwNjQ5MzMzNn0.zPw--YHz275U40iaFrvfGHbdq_TWbP68voVujFVD3a5IGiQhsAIfS7iEWq5eOOEKeRTbnJL1VlKFS_xC9rnKxA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"IdRecarga\": 1, \r\n        \"NumeroTelefono\": \"3202465896\",\r\n        \"Precio\": 15000,\r\n        \"Vendedor\": {\r\n            \"IdUser\": 1,\r\n            \"Name\": \"Vendedor Prueba\",\r\n            \"Status\": 1\r\n        },\r\n        \"Operador\": {\r\n            \"IdOperador\": 2,\r\n            \"NombreOperador\": \"Tigo\",\r\n            \"ImagenOperador\": \"localhost:4200\"\r\n        }\r\n    },\r\n    {\r\n        \"IdRecarga\": 3, \r\n        \"NumeroTelefono\": \"3202465896\",\r\n        \"Precio\": 15000,\r\n        \"Vendedor\": {\r\n            \"IdUser\": 1,\r\n            \"Name\": \"Vendedor Prueba\",\r\n            \"Status\": 1\r\n        },\r\n        \"Operador\": {\r\n            \"IdOperador\": 2,\r\n            \"NombreOperador\": \"Tigo\",\r\n            \"ImagenOperador\": \"localhost:4200\"\r\n        }\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/recargas/eliminarMasivo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"recargas",
+						"eliminarMasivo"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
